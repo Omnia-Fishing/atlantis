@@ -1,4 +1,4 @@
-FROM runatlantis/atlantis:v0.4.12
+FROM runatlantis/atlantis:latest
 
 LABEL maintainer="Steve Neuharth<steve@aethereal.io>"
 
