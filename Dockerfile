@@ -21,5 +21,5 @@ RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
 RUN apk -Uuv add groff less unzip
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
-RUN ./aws/install
+RUN ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
 RUN rm /var/cache/apk/*
