@@ -18,7 +18,8 @@ RUN apk add git
 RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
 
 # Install aws-cli
-RUN apk -Uuv add groff less python3 py3-pip
-RUN pip3 install awscli six
-RUN apk --purge -v del py3-pip
+RUN apk -Uuv add groff less unzip
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+RUN unzip awscliv2.zip
+RUN ./aws/install
 RUN rm /var/cache/apk/*
